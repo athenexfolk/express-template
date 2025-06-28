@@ -1,0 +1,44 @@
+{
+	"name": "express-template",
+	"version": "1.0.0",
+	"description": "A modern Express.js TypeScript template with Biome",
+	"main": "dist/index.js",
+	"type": "module",
+	"engines": {
+		"node": ">=22.0.0"
+	},
+		"keywords": [
+			"express",
+			"typescript",
+			"template",
+			"esm",
+			"biome"
+		],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsx --watch src/index.ts",
+		"start": "node dist/index.js",
+		"type-check": "tsc --noEmit",
+		"lint": "biome lint src/",
+		"lint:fix": "biome lint --write src/",
+		"format": "biome format --write .",
+		"format:check": "biome format .",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"ci": "npm run type-check && npm run check"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^5.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.0.6",
+		"@tsconfig/node22": "^22.0.2",
+		"@types/express": "^5.0.3",
+		"@types/node": "^24.0.4",
+		"tsup": "^8.5.0",
+		"tsx": "^4.20.3",
+		"typescript": "^5.8.3"
+	}
+}

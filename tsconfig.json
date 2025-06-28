@@ -1,0 +1,46 @@
+{
+	"extends": "@tsconfig/node22/tsconfig.json",
+	"compilerOptions": {
+		// Output settings
+		"outDir": "./dist",
+		"rootDir": "./src",
+
+		// Module system (ESM with "type": "module" in package.json)
+		"module": "ES2022",
+		"moduleResolution": "bundler",
+		"target": "ES2022",
+
+		// Strict type checking
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"exactOptionalPropertyTypes": true,
+
+		// Import/Export
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"allowImportingTsExtensions": false,
+
+		// Path mapping for cleaner imports
+		"baseUrl": "./src",
+		"paths": {
+			"@/*": ["*"]
+		},
+
+		// Emit settings (for type-check script)
+		"declaration": false,
+		"declarationMap": false,
+		"sourceMap": false,
+		"removeComments": true,
+
+		// Other
+		"skipLibCheck": true,
+		"isolatedModules": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+}
