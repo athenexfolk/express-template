@@ -19,7 +19,7 @@ A modern, production-ready Express.js template built with TypeScript, ESM module
 ### Prerequisites
 
 - Node.js 22+
-- npm or yarn
+- pnpm (recommended), npm, or yarn
 
 ### Installation
 
@@ -29,10 +29,10 @@ git clone <your-repo-url>
 cd express-template
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm run dev
 ```
 
 The server will start on `http://localhost:3000`
@@ -41,17 +41,17 @@ The server will start on `http://localhost:3000`
 
 | Script | Description |
 |--------|-------------|
-| `npm run dev` | Start development server with hot reload |
-| `npm run build` | Build for production |
-| `npm start` | Start production server |
-| `npm run type-check` | Run TypeScript type checking |
-| `npm run lint` | Check code for linting issues |
-| `npm run lint:fix` | Fix automatically fixable linting issues |
-| `npm run format` | Format code with Biome |
-| `npm run format:check` | Check if code is properly formatted |
-| `npm run check` | Run all checks (lint + format) |
-| `npm run check:fix` | Fix all issues automatically |
-| `npm run ci` | Run checks for continuous integration |
+| `pnpm run dev` | Start development server with hot reload |
+| `pnpm run build` | Build for production |
+| `pnpm start` | Start production server |
+| `pnpm run type-check` | Run TypeScript type checking |
+| `pnpm run lint` | Check code for linting issues |
+| `pnpm run lint:fix` | Fix automatically fixable linting issues |
+| `pnpm run format` | Format code with Biome |
+| `pnpm run format:check` | Check if code is properly formatted |
+| `pnpm run check` | Run all checks (lint + format) |
+| `pnpm run check:fix` | Fix all issues automatically |
+| `pnpm run ci` | Run checks for continuous integration |
 
 ## 📁 Project Structure
 
@@ -60,9 +60,10 @@ The server will start on `http://localhost:3000`
 │   └── index.ts          # Main application entry
 ├── dist/                 # Built files (auto-generated)
 ├── .env.example          # Environment variables template
+├── biome.json            # Biome configuration
 ├── tsconfig.json         # TypeScript configuration
 ├── tsup.config.ts        # Build configuration
-├── .prettierrc           # Code formatting rules
+├── pnpm-lock.yaml        # Package manager lock file
 └── package.json          # Project dependencies
 ```
 
@@ -107,10 +108,10 @@ export default router;
 
 ```bash
 # Build the application
-npm run build
+pnpm run build
 
 # Start production server
-npm start
+pnpm start
 ```
 
 ## 🔧 Configuration
@@ -146,8 +147,9 @@ Biome provides:
 - **Language**: TypeScript 5.x
 - **Build Tool**: tsup
 - **Dev Server**: tsx
-- **Code Quality**: Biome
+- **Code Quality**: Biome 2.x
 - **Module System**: ESM (ES2022)
+- **Package Manager**: pnpm (recommended)
 
 ## 🤝 Contributing
 
