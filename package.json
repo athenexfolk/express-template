@@ -7,13 +7,13 @@
 	"engines": {
 		"node": ">=22.0.0"
 	},
-		"keywords": [
-			"express",
-			"typescript",
-			"template",
-			"esm",
-			"biome"
-		],
+	"keywords": [
+		"express",
+		"typescript",
+		"template",
+		"esm",
+		"biome"
+	],
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsx --watch src/index.ts",
@@ -29,16 +29,16 @@
 	},
 	"author": "",
 	"license": "ISC",
-	"dependencies": {
-		"express": "^5.1.0"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "2.0.6",
 		"@tsconfig/node22": "^22.0.2",
 		"@types/express": "^5.0.3",
-		"@types/node": "^24.0.4",
+		"@types/node": "^24.0.7",
 		"tsup": "^8.5.0",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"express": "^5.1.0"
 	}
 }
