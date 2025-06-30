@@ -10,7 +10,7 @@ A modern, production-ready Express.js template built with TypeScript, ESM module
 - ⚡ **Fast Build** - tsup for lightning-fast compilation
 - 🔥 **Hot Reload** - tsx for instant development feedback
 - �️ **Biome** - Ultra-fast linting and formatting
-- 🧪 **Unit Testing** - Jest with TypeScript support and Supertest for API testing
+- 🧪 **Unit Testing** - Vitest with TypeScript support and Supertest for API testing
 - 📊 **Test Coverage** - Built-in coverage reporting
 - 📁 **Path Mapping** - Clean imports with `@/` aliases
 - 🔒 **Type Safety** - Strict TypeScript configuration
@@ -60,7 +60,7 @@ The server will start on `http://localhost:3000`
 
 ## 📁 Project Structure
 
-```
+```plaintext
 ├── src/
 │   ├── index.ts          # Main application entry
 │   ├── index.test.ts     # Application integration tests
@@ -120,7 +120,7 @@ export default router;
 
 ## 🧪 Testing
 
-This template includes comprehensive unit testing with Jest and Supertest.
+This template includes comprehensive unit testing with **Vitest** and **Supertest**.
 
 ### Running Tests
 
@@ -157,7 +157,6 @@ describe('GET /api/endpoint', () => {
             .get('/api/endpoint')
             .expect(200)
             .expect('Content-Type', /json/);
-
         expect(response.body).toEqual({
             message: 'Expected message'
         });
@@ -186,9 +185,9 @@ describe('myFunction', () => {
 
 Coverage reports are generated in the `coverage/` directory and include:
 
-- **HTML Report**: Open `coverage/lcov-report/index.html` in your browser
+- **HTML Report**: Open `coverage/index.html` in your browser
 - **Terminal Summary**: Displayed after running tests with coverage
-- **Coverage Files**: `coverage/lcov.info` for CI integration
+- **Coverage Files**: `coverage/coverage-final.json` for CI integration
 
 ## 🏗️ Production Build
 
@@ -205,6 +204,7 @@ pnpm start
 ### TypeScript
 
 The project uses strict TypeScript configuration with:
+
 - ES2022 target and modules
 - Path mapping for clean imports
 - Strict type checking enabled
@@ -213,6 +213,7 @@ The project uses strict TypeScript configuration with:
 ### Build System
 
 Built with tsup for optimal performance:
+
 - ESM output format
 - ES2022 target
 - Minification enabled
@@ -221,6 +222,7 @@ Built with tsup for optimal performance:
 ### Code Quality
 
 Biome provides:
+
 - Ultra-fast linting (10-100x faster than ESLint)
 - Consistent code formatting
 - Import organization
@@ -233,7 +235,7 @@ Biome provides:
 - **Language**: TypeScript 5.x
 - **Build Tool**: tsup
 - **Dev Server**: tsx
-- **Testing**: Jest 30.x with ts-jest
+- **Testing**: Vitest 3.x
 - **API Testing**: Supertest 7.x
 - **Code Quality**: Biome 2.x
 - **Module System**: ESM (ES2022)
